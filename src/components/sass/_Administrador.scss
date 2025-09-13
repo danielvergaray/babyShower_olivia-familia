@@ -165,12 +165,26 @@
 
 @media (max-width: 846px) {
   .seccion-administrador {
-    margin: 50px 30px;
-
+    margin: 50px 20px;
+    .administrador-menu {
+      grid-template-columns: 75% 25%;
+    }
     .administrador-lista {
       .administrador-submenu {
         p {
-          font-size: 14px;
+          font-size: 9px;
+        }
+      }
+      .seccionRegalos {
+        .seccionRegalos-imagenes {
+          img {
+            width: 60px;
+          }
+        }
+        .seccionRegalos-info {
+          p {
+            font-size: 8px;
+          }
         }
       }
     }

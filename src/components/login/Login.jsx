@@ -25,7 +25,7 @@ const Login = ({
       setIsButtonDisabled(false);
     }
   }, [userCredentials]);
-  console.log(userCredentials);
+
   useEffect(() => {
     if (wrongPasswordAlert) {
       toast("Usuario o contraseña incorrectos");
