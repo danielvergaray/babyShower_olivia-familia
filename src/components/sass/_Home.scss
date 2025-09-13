@@ -1,0 +1,844 @@
+@import "/src/components/sass/reutilizables/colors";
+
+@media (min-width: 847px) {
+  .hero-section {
+    text-align: center;
+    .hero-imagenCabecera-desktop {
+      img {
+        width: 100%;
+      }
+    }
+    .hero-imagenCabecera-mobile {
+      display: none;
+    }
+    .hero-subtitulo {
+      padding-top: 20px;
+      p {
+        letter-spacing: 10px;
+      }
+    }
+    .hero-titulo {
+      margin-top: 80px;
+      img {
+        width: 45%;
+      }
+    }
+    .hero-fecha {
+      padding: 20px 0;
+    }
+    .hero-flecha {
+      font-size: 3rem;
+      color: $Principal-azul;
+      animation: slide-in 1s infinite;
+
+      @keyframes slide-in {
+        0% {
+          transform: translateY(0%);
+        }
+
+        50% {
+          transform: translateY(20px);
+        }
+        1000% {
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+
+  .seccion-contador {
+    padding: 50px 0 100px;
+    .contador-titulo {
+      display: flex;
+      margin: auto;
+      width: 60%;
+      p {
+        width: 77%;
+      }
+    }
+    .contador-subtitulo {
+      padding-top: 20px;
+      display: flex;
+      margin: auto;
+      width: 70%;
+      align-items: center;
+    }
+    .home-cuentaRegresiva {
+      div {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 50px;
+
+        .contador-recuadro {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          .contador-recuadro-numero {
+            width: fit-content;
+            padding-top: 0;
+            .contador-recuadro-digito {
+              width: 8rem;
+              height: 7rem;
+              padding: 0;
+
+              p {
+                font-size: 96px;
+                margin: auto;
+                font-family: "abygaer";
+              }
+            }
+          }
+          .contador-texto {
+            padding: 0;
+            p {
+              padding: 0;
+              font-weight: 100;
+              font-size: 1rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .seccion-sobreEvento {
+    .sobreEvento-carruselVersion {
+      .carousel {
+        padding-top: 100px;
+        .carousel-indicators {
+          position: absolute;
+          margin: 0;
+          bottom: 0px;
+        }
+        .carousel-inner {
+          .carousel-item {
+            height: 300px;
+            text-align: center;
+            .sobreEvento-subtitulo {
+              text-align: center;
+              padding: 40px 0;
+            }
+            .sobreEvento-fecha-hora {
+              display: grid;
+              grid-template-columns: 45% 10% 45%;
+              width: 60%;
+              margin: auto;
+              padding-top: 20px;
+
+              p:nth-child(1) {
+                font-size: 96px;
+                height: 6rem;
+                font-family: "abygaer";
+              }
+              .sobreEvento-fecha {
+                grid-column: 1;
+                height: max-content;
+              }
+              .sobreEvento-icono {
+                grid-column: 2;
+                margin: auto auto 20px;
+                img {
+                  width: 50px;
+                }
+              }
+              .sobreEvento-hora {
+                grid-column: 3;
+                height: max-content;
+              }
+            }
+
+            .sobreEvento-lugar-ubicacion {
+              display: flex;
+              width: 55%;
+              margin: auto;
+              p {
+                font-size: 28px;
+              }
+            }
+
+            .sobreEvento-btn {
+              display: flex;
+              justify-content: center;
+              padding: 20px 0;
+            }
+          }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+          display: none;
+        }
+      }
+      .sobreEvento-flechas {
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+        color: $Principal-azul;
+        padding-top: 50px;
+        svg {
+          cursor: pointer;
+        }
+        :hover {
+          color: $Secundario-naranja;
+        }
+      }
+    }
+  }
+
+  .seccion-carousel {
+    overflow-x: hidden;
+    padding-top: 100px;
+    .carousel-titulo {
+      .carousel-titulo-imagen {
+        text-align: center;
+        img {
+          height: 80px;
+        }
+      }
+      p {
+        padding: 30px;
+        width: 65%;
+        margin: auto;
+      }
+    }
+
+    .slider {
+      overflow: hidden;
+
+      width: 100%;
+      .slider-track {
+        display: flex;
+        width: max-content; // cantidad * 2
+        animation: scroll 20s linear infinite; // siempre hacia la izq
+
+        &:hover {
+          animation-play-state: paused;
+        }
+        .slide {
+          img {
+            height: 500px;
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); //cantidad de iconos
+    }
+  }
+
+  .seccion-formulario {
+    display: flex;
+    flex-direction: column;
+
+    .seccion-formulario-userContainer {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      .seccion-formulario-titulo {
+        margin: 0;
+        padding-left: 50px;
+        grid-column: 1;
+        p {
+          text-align: left;
+        }
+        :nth-child(2) {
+          padding-top: 20px;
+          width: 90%;
+        }
+      }
+      .seccion-formulario-usuario {
+        height: fit-content;
+        position: relative;
+        grid-column: 2;
+        form {
+          display: flex;
+          justify-content: center;
+          input {
+            width: 80%;
+            color: $Principal-azul;
+          }
+
+          .formulario-icono {
+            font-size: 40px;
+            top: 30px;
+            left: 85%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+          }
+          .formulario-icono-x {
+            color: $Secundario-naranja;
+          }
+        }
+        .dropdown {
+          display: flex;
+          justify-content: center;
+
+          button {
+            display: grid;
+            grid-template-columns: 95% 5%;
+            width: 80%;
+            border-radius: 9999px;
+            padding: 20px 30px;
+            border: 1px solid $Principal-azul;
+            outline: none;
+            background-color: white;
+            margin: 10px 0;
+
+            p {
+              font-size: 20px;
+              margin: 0;
+              text-align: left;
+              color: $Principal-azul;
+            }
+          }
+          #dropdown-basic::after {
+            display: none !important;
+          }
+          .dropdown-menu {
+            width: 80%;
+
+            a {
+              font-size: 20px;
+              color: $Principal-azul;
+            }
+          }
+        }
+        .formulario-usuario-linkInvitados {
+          margin: auto;
+          padding: 10px 0 10px 12%;
+          p {
+            text-decoration: underline;
+            margin: 0;
+
+            cursor: pointer;
+          }
+        }
+
+        .seccion-formulario-invitados {
+          .seccion-formulario-invitadosInput {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            width: 100%;
+            padding: 20px 6% 20px;
+            form {
+              grid-column: 1;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              input {
+                width: 90%;
+              }
+            }
+            .icono-agregar {
+              grid-column: 2;
+              margin: auto 0;
+              svg {
+                cursor: pointer;
+                color: $Principal-azul;
+                font-size: 50px;
+              }
+            }
+          }
+          .seccion-formulario-invitadosAgregados {
+            padding-left: 10%;
+            padding-bottom: 20px;
+            width: 80%;
+            div {
+              display: grid;
+              grid-template-columns: 80% 20%;
+              height: fit-content;
+
+              :nth-child(2) {
+                padding-left: 10px;
+                font-size: 1.25rem;
+                color: $Principal-azul;
+                margin: auto 0;
+                cursor: pointer;
+                grid-column: 2;
+              }
+              p {
+                margin: 0;
+                font-size: 1.5rem;
+                font-family: "give-away";
+                grid-column: 1;
+                height: 36px;
+              }
+            }
+          }
+        }
+        .seccion-formulario-btn {
+          width: 80%;
+          margin: auto;
+          display: flex;
+          button {
+            border-radius: 9999px;
+          }
+
+          .disabledButton {
+            background-color: gray;
+            cursor: auto;
+          }
+        }
+      }
+    }
+
+    /* input {
+      width: 450px;
+      border-radius: 9999px;
+      padding: 10px 20px;
+      border: 1px solid blue;
+      outline: none;
+    } */
+  }
+  .seccion-regalos {
+    .seccion-regalos-frase {
+      padding: 100px 0 50px 0;
+      display: flex;
+      width: 72%;
+      margin: auto;
+      p {
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .seccion-regalos-btn {
+      display: flex;
+      a {
+        margin: auto;
+      }
+    }
+  }
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 846px) {
+  .hero-section {
+    text-align: center;
+    height: 100dvh;
+    .hero-imagenCabecera-desktop {
+      display: none;
+    }
+    .hero-imagenCabecera-mobile {
+      display: block;
+      img {
+        width: 100%;
+        height: 100px;
+      }
+    }
+    .hero-titulo {
+      padding-top: 40%;
+      img {
+        width: 85%;
+      }
+    }
+    .hero-subtitulo {
+      padding-top: 20px;
+      p {
+        letter-spacing: 10px;
+      }
+    }
+    .hero-fecha {
+      padding-top: 20px;
+    }
+    .hero-flecha {
+      padding-top: 100px;
+      font-size: 3rem;
+      color: $Principal-azul;
+      animation: slide-in 1s infinite;
+      @keyframes slide-in {
+        0% {
+          transform: translateY(0%);
+        }
+
+        50% {
+          transform: translateY(20px);
+        }
+        1000% {
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+
+  .seccion-contador {
+    text-align: center;
+    .titulo-imagen {
+      padding-bottom: 20px;
+    }
+
+    .contador-titulo {
+      display: flex;
+
+      p {
+        width: 65%;
+      }
+    }
+
+    .contador-subtitulo {
+      display: flex;
+      line-height: 1;
+      padding-top: 10px;
+      p {
+        width: 65%;
+      }
+      img {
+        margin-top: 0;
+      }
+      :nth-child(3) {
+        width: 60px;
+      }
+    }
+
+    .home-cuentaRegresiva {
+      div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 70%;
+        padding: 20px 0 0px;
+        margin: auto;
+        align-items: center;
+        .contador-recuadro {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          width: 120px;
+          .contador-recuadro-numero {
+            margin: 0;
+            padding: 0;
+            .contador-recuadro-digito {
+              height: 4.5em;
+              padding: 0;
+              width: fit-content;
+              p {
+                font-size: 60px;
+
+                font-family: "abygaer";
+              }
+            }
+          }
+          .contador-texto {
+            padding: 0;
+            .otros-textos {
+              font-size: 15px;
+              width: fit-content;
+              margin: 0;
+            }
+          }
+        }
+        .contador-recuadro:nth-child(1) {
+          .contador-recuadro-numero {
+            .contador-recuadro-span {
+              padding-left: 10px;
+            }
+          }
+        }
+
+        .contador-recuadro:nth-child(4) {
+          .contador-recuadro-numero {
+            .contador-recuadro-span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .seccion-sobreEvento {
+    .sobreEvento-carruselVersion {
+      .carousel {
+        .carousel-inner {
+          .carousel-item {
+            padding-top: 60px;
+            height: 320px;
+            .sobreEvento-subtitulo {
+              padding-bottom: 40px;
+              text-align: center;
+            }
+            .sobreEvento-fecha-hora {
+              display: grid;
+              grid-template-columns: 45% 10% 45%;
+              width: 100%;
+              text-align: center;
+              p:nth-child(1) {
+                font-size: 60px;
+                height: 3.5rem;
+                font-family: "abygaer";
+              }
+
+              .sobreEvento-icono {
+                margin: auto;
+                img {
+                  width: 30px;
+                }
+              }
+            }
+            .sobreEvento-lugar-ubicacion {
+              display: flex;
+              width: 90%;
+              margin: auto;
+
+              :nth-child(3) {
+                width: 60px;
+              }
+            }
+            .sobreEvento-btn {
+              display: flex;
+              justify-content: center;
+              padding: 20px 0;
+            }
+          }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+          display: none;
+        }
+      }
+      .sobreEvento-flechas {
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+
+        svg {
+          cursor: pointer;
+          color: $Principal-azul;
+        }
+      }
+    }
+  }
+
+  .seccion-carousel {
+    overflow-x: hidden;
+    padding-bottom: 0 !important;
+    .carousel-titulo {
+      .carousel-titulo-imagen {
+        text-align: center;
+        img {
+          height: 80px;
+        }
+      }
+      p {
+        padding: 30px;
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    .slider {
+      overflow: hidden;
+      width: 100%;
+      .slider-track {
+        display: flex;
+        overflow-x: scroll;
+        width: calc(375px * 19); //Cantidad de imagenes * 2
+        animation: scroll 15s linear infinite alternate;
+        /* width: max-content;  */
+        /* animation: scroll 15s linear infinite; */ // siempre hacia la izq
+
+        .slide {
+          img {
+            height: 500px;
+            margin: 0 5px;
+            perspective: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); //cantidad de iconos
+    }
+  }
+
+  .seccion-formulario {
+    display: flex;
+    flex-direction: column;
+
+    .seccion-formulario-userContainer {
+      display: flex;
+      flex-direction: column;
+      .seccion-formulario-titulo {
+        margin: auto;
+        p {
+          margin: auto;
+          width: 75%;
+        }
+        :nth-child(2) {
+          padding: 30px 0;
+          width: 70%;
+        }
+      }
+      .seccion-formulario-usuario {
+        height: fit-content;
+        position: relative;
+        margin: 0 15px;
+        form {
+          display: flex;
+          justify-content: center;
+          input {
+            width: 100%;
+          }
+
+          .formulario-icono {
+            font-size: 35px;
+            top: 25px;
+            left: 92%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+          }
+          .formulario-icono-x {
+            color: $Secundario-naranja;
+          }
+        }
+        .dropdown {
+          display: flex;
+          justify-content: center;
+          padding-top: 20px;
+          button {
+            display: grid;
+            grid-template-columns: 95% 5%;
+            width: 100%;
+            border-radius: 9999px;
+            padding: 20px 40px;
+            border: 1px solid $Principal-azul;
+            outline: none;
+            background-color: white;
+            color: $Principal-azul;
+
+            p {
+              margin: 0;
+              text-align: left;
+            }
+          }
+          #dropdown-basic::after {
+            display: none !important;
+          }
+          .dropdown-menu {
+            width: 100%;
+          }
+        }
+        .formulario-usuario-linkInvitados {
+          padding-top: 20px;
+          margin: auto;
+
+          p {
+            text-decoration: underline;
+            font-size: 15px;
+            margin: 0;
+            text-align: left;
+            padding-left: 5px;
+          }
+        }
+      }
+
+      .seccion-formulario-invitados {
+        padding-top: 20px;
+        .seccion-formulario-invitadosInput {
+          display: grid;
+          grid-template-columns: 87% 13%;
+          margin: auto;
+          form {
+            display: flex;
+
+            input {
+              width: 100%;
+            }
+          }
+          .icono-agregar {
+            grid-column: 2;
+            color: $Principal-azul;
+            text-align: right;
+            margin: auto;
+            svg {
+              font-size: 50px;
+            }
+          }
+        }
+        .seccion-formulario-invitadosAgregados {
+          padding: 20px 0 0 0px;
+          margin: auto;
+          margin-left: 20px;
+          width: 70%;
+
+          div {
+            display: grid;
+            grid-template-columns: 90% 10%;
+
+            /* Icono eliminar invitado */
+            :nth-child(2) {
+              padding-left: 10px;
+              font-size: 1.25rem;
+              margin: auto 0;
+            }
+            p {
+              margin: auto 0;
+              text-align: left;
+              font-family: "give-away";
+            }
+          }
+        }
+      }
+      .seccion-formulario-btn {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        padding: 20px 0;
+        button {
+          border-radius: 9999px;
+          padding: 20px 30px;
+        }
+        .disabledButton {
+          background-color: gray;
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  .seccion-regalos {
+    .seccion-regalos-frase {
+      padding: 100px 0 50px 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+      line-height: 1;
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      .cuerpo-textos {
+        width: 61%;
+        margin: 0 10px;
+      }
+    }
+    .seccion-regalos-btn {
+      display: flex;
+
+      a {
+        margin: auto;
+      }
+    }
+  }
+}

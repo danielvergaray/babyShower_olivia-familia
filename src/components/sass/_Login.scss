@@ -1,0 +1,66 @@
+@import "/src/components/sass/reutilizables/colors";
+
+.seccion-login {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+
+  .login-contenido {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    p {
+      color: $Principal-azul;
+      font-family: "give-away";
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 5px 0;
+      input {
+        height: max-content;
+        margin: 5px 0;
+        width: 100%;
+        font-size: 12px;
+        text-transform: none;
+
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+    }
+    .login-btn {
+      button {
+        font-size: 12px;
+        padding: 15px 30px;
+        margin: 5px;
+
+        &:hover {
+          background-color: $Secundario-naranja;
+        }
+      }
+      .btn-desactivado {
+        background-color: grey;
+        &:hover {
+          background-color: gray;
+        }
+      }
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 846px) {
+  .seccion-login {
+    .login-contenido {
+      .login-btn {
+        display: flex;
+      }
+    }
+  }
+}

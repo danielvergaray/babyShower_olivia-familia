@@ -1,0 +1,142 @@
+@import "/src/components/sass/reutilizables/colors";
+
+@media (min-width: 847px) {
+  .modal-content {
+    background-color: $Principal-blanco;
+    border-radius: 30px;
+    padding: 20px 50px;
+    font-family: "give-away";
+    width: fit-content;
+    margin: auto;
+    //height: 320px;
+  }
+  .modal-header {
+    border-bottom: none !important;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    svg {
+      cursor: pointer;
+      font-size: 35px;
+      text-align: right;
+      color: $Principal-azul;
+      &:hover {
+        color: $Secundario-naranja;
+      }
+    }
+  }
+
+  .modal-body {
+    text-align: center;
+    padding: 0;
+    img {
+      width: 50px;
+      padding: 20px 0;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1;
+      margin: auto;
+    }
+  }
+  .modal-footer {
+    padding-top: 30px;
+    margin: auto;
+    border-top: none !important;
+    button {
+      font-size: 12px;
+      font-family: "abygaer";
+
+      &:hover {
+        background-color: $Secundario-naranja;
+      }
+    }
+  }
+
+  .modal-confirmacionInvitacion {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-adminRegalos {
+    .modal-adminRegalos-container {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      padding: 20px;
+      border: 1px solid $Principal-azul;
+      margin-top: 20px;
+
+      .modal-adminRegalos-imagen {
+        img {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      .modal-adminRegalos-info {
+        padding: 0 10px;
+
+        div {
+          padding: 2px 0;
+          p {
+            font-size: 15px;
+            height: fit-content;
+            text-align: left;
+            line-height: 1.25;
+          }
+          span {
+            border-bottom: 2px solid gray;
+            opacity: 15%;
+          }
+          :nth-child(1) {
+            font-family: "abgyer";
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 846px) {
+  .modal-content {
+    background-color: $Principal-blanco;
+    border-radius: 30px;
+    font-family: "give-away";
+    margin: 0 20px;
+  }
+  .modal-header {
+    border-bottom: none !important;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0;
+
+    svg {
+      cursor: pointer;
+      font-size: 35px;
+      color: $Principal-azul;
+    }
+  }
+  .modal-body {
+    text-align: center;
+    padding: 0;
+
+    img {
+      width: 40px;
+      padding: 10px 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .modal-footer {
+    border-top: none !important;
+  }
+
+  .modal-confirmacionInvitacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}

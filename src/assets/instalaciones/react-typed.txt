@@ -1,0 +1,11 @@
+1- Instalaciones
+
+npm install react-typed --save
+
+2- Importamos en el componente que usamos
+
+import { ReactTyped } from "react-typed";
+
+3- Uso
+
+<ReactTyped strings={["Here you can find anything"]} typeSpeed={40} loop/>

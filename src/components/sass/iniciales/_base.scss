@@ -1,0 +1,190 @@
+@import "../reutilizables/colors";
+@import "../reutilizables/Tipografias";
+
+body {
+  text-transform: uppercase;
+
+  p {
+    color: $Principal-azul;
+  }
+  .subtitulos-textos {
+    font-family: "abygaer";
+    font-size: 25px;
+  }
+  .cuerpo-textos {
+    font-family: "give-away";
+    font-size: 32px;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  }
+  .otros-textos {
+    font-family: "give-away";
+    font-size: 16px;
+  }
+  button {
+    padding: 20px 30px;
+    border: none;
+    font-weight: 100;
+    color: $Principal-blanco;
+    font-size: 15px;
+    border-radius: 9999px;
+    background-color: $Principal-azul;
+    text-transform: uppercase;
+    font-family: "abygaer";
+  }
+
+  input {
+    border-radius: 9999px;
+    padding: 20px 30px;
+    border: 1px solid $Principal-azul;
+    outline: none;
+    font-size: 20px;
+    font-family: "give-away";
+    text-transform: uppercase;
+    color: $Principal-azul;
+  }
+  ::placeholder {
+    font-family: "give-away";
+    color: $Principal-azul;
+  }
+  .dropdown {
+    font-family: "give-away";
+    color: $Principal-azul;
+  }
+  .toastify-toast {
+    background-color: $Principal-azul !important;
+    color: white;
+    font-family: "give-away";
+  }
+
+  .seccion-contador,
+  .sobreEvento-icono,
+  .sobreEvento-lugar-ubicacion,
+  .seccion-regalos {
+    img {
+      width: 60px;
+      margin: auto;
+    }
+  }
+
+  .seccion-sobreEvento,
+  .seccion-regalos,
+  .seccion-formulario {
+    padding: 150px 4vw;
+
+    button {
+      &:hover {
+        background-color: $Secundario-naranja;
+      }
+    }
+  }
+
+  .hero-section,
+  .seccion-carousel,
+  .seccion-formulario {
+    background-color: $Principal-blanco;
+  }
+
+  .seccion-regalos,
+  .seccion-sobreEvento {
+    background-color: $Principal-beige;
+    .titulo-imagen {
+      text-align: left;
+      img {
+        width: 386px;
+      }
+    }
+  }
+
+  .hero-section,
+  .seccion-contador,
+  .seccion-carousel {
+    background-color: $Principal-blanco;
+  }
+
+  /*  @keyframes ZoomIn {
+        0% {
+          opacity: 1;
+          transform: scale(0.95);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(0.95);
+        }
+      } */
+
+  .link-administrador {
+    a {
+      text-decoration: none;
+      p {
+        margin: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 846px) {
+  body {
+    .cuerpo-textos {
+      font-family: "give-away";
+      font-size: 18px;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+    }
+    .otros-textos {
+      font-family: "give-away";
+      font-size: 12px;
+    }
+    button {
+      font-size: 14px;
+    }
+
+    input {
+      border-radius: 9999px;
+      padding: 20px 30px;
+      border: 1px solid $Principal-azul;
+      outline: none;
+      font-size: 15px;
+    }
+    ::placeholder {
+      font-family: "give-away";
+      color: $Principal-azul;
+    }
+
+    .seccion-contador,
+    .sobreEvento-icono,
+    .sobreEvento-lugar-ubicacion,
+    .seccion-regalos {
+      img {
+        width: 50px;
+        margin: auto;
+      }
+    }
+
+    .seccion-regalos,
+    .seccion-sobreEvento {
+      background-color: $Principal-beige;
+      .titulo-imagen {
+        text-align: left;
+        img {
+          width: 250px;
+        }
+      }
+    }
+
+    .seccion-sobreEvento,
+    .seccion-carousel,
+    .seccion-regalos,
+    .seccion-contador,
+    .seccion-formulario {
+      padding: 50px 4vw;
+    }
+  }
+}

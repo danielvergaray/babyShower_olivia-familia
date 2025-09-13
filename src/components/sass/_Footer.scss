@@ -1,0 +1,65 @@
+@media (min-width: 847px) {
+  .seccion-footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $Principal-azul;
+    font-family: "give-away";
+    padding: 20px;
+    font-size: 12px;
+
+    .link {
+      a {
+        text-decoration: none;
+        width: min-content;
+        cursor: auto;
+        p {
+          color: white;
+          margin: 0;
+          width: fit-content;
+          cursor: pointer;
+        }
+      }
+      :hover {
+        color: $Secundario-naranja;
+      }
+    }
+    .link-admin {
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media (max-width: 846px) {
+  .seccion-footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $Principal-azul;
+    font-family: "give-away";
+    padding: 20px;
+    font-size: 12px;
+
+    .link {
+      a {
+        text-decoration: none;
+        width: min-content;
+        cursor: auto;
+        p {
+          color: white;
+          margin: 0;
+          width: fit-content;
+        }
+      }
+    }
+    .link-admin {
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

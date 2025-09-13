@@ -1,0 +1,83 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# ==========================
+# Dependencias
+# ==========================
+/node_modules
+
+# ==========================
+# Builds
+# ==========================
+/build
+/dist
+
+# ==========================
+# Archivos de entorno (claves privadas)
+# ==========================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# ==========================
+# Archivos de Firebase
+# (puedes quitar los que quieras si tu config no es sensible)
+# ==========================
+.firebase/
+.firebaserc
+# firebase.json lo puedes subir si lo usas para deploy,
+# pero si contiene claves privadas -> ignóralo también
+# firebase.json
+
+# ==========================
+# Archivos temporales / Logs
+# ==========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# ==========================
+# Sistema
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Cobertura de tests
+# ==========================
+/coverage
+
+# ==========================
+# Archivos de imágenes locales
+# (usa Cloudinary / Firebase Storage en vez de subirlas al repo)
+# ==========================
+/public/uploads
+

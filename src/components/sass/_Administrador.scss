@@ -1,0 +1,178 @@
+@import "/src/components/sass/reutilizables/colors";
+
+.seccion-administrador {
+  margin: 50px 60px;
+  font-family: "give-away";
+  .administrador-menu {
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    .administrador-menu-btn {
+      grid-column: 1;
+      background-color: $Principal-azul;
+      width: fit-content;
+      border-radius: 9999px;
+      padding: 5px;
+      button {
+        padding: 10px 20px;
+        font-size: 10px;
+        background-color: transparent;
+        font-family: "give-away";
+        color: white;
+      }
+      .btn-escogido {
+        border: 1px solid $Principal-azul;
+        background-color: white;
+        color: $Principal-azul;
+      }
+    }
+    .administrador-dropdown {
+      border-radius: 9999px;
+      background-color: $Principal-azul;
+      margin: auto;
+      button {
+        background-color: $Secundario-naranja;
+        font-size: 12px;
+        border: none;
+      }
+      .dropdown-menu {
+        background-color: $Secundario-naranja;
+        font-size: 12px;
+        background-color: $Principal-blanco;
+
+        .dropdown-item {
+          color: $Principal-azul;
+          &:hover {
+            background-color: $Secundario-naranja;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    font-size: 15px;
+    color: $Principal-azul;
+  }
+
+  .administrador-lista {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 20px;
+
+    .administrador-submenu {
+      display: flex;
+      width: 100%;
+      padding-top: 20px;
+      p {
+        width: 50%;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .administrador-fila {
+      display: flex;
+      width: 100%;
+      padding: 10px 0;
+      align-items: center;
+      p {
+        width: 50%;
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+
+        &:nth-child(1) {
+          text-align: left;
+        }
+        svg {
+          cursor: pointer;
+        }
+      }
+      .icono-borrar {
+        color: $Principal-azul;
+        font-size: 15px;
+      }
+      .apagado {
+        color: gray;
+        svg {
+          cursor: auto;
+        }
+      }
+    }
+    span {
+      border-bottom: 2px solid gray;
+      opacity: 15%;
+    }
+    .seccionRegalos {
+      display: grid;
+      grid-template-columns: 16.66% 83.33%;
+      .seccionRegalos-imagenes {
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 80px;
+        }
+      }
+      .seccionRegalos-info {
+        grid-column: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        p {
+          font-size: 12px;
+          text-align: center;
+          width: 20%;
+          line-height: 1.1;
+        }
+
+        .regalo-reservado {
+          color: $Secundario-naranja;
+        }
+        .icono-borrar {
+          color: $Principal-azul;
+          font-size: 15px;
+        }
+        .apagado {
+          color: gray;
+          svg {
+            cursor: auto;
+          }
+        }
+      }
+
+      .administrador-submenu {
+        p {
+          width: 16.66%;
+        }
+        div {
+          width: 16%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .spinner {
+    margin-top: 15%;
+    text-align: center;
+    color: $Principal-azul;
+  }
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 846px) {
+  .seccion-administrador {
+    margin: 50px 30px;
+
+    .administrador-lista {
+      .administrador-submenu {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
